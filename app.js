@@ -7,10 +7,19 @@ const expressEjsLayout = require('express-ejs-layouts')
 const flash = require('connect-flash');
 const session = require('express-session');
 const passport = require('passport');
+const MongooseConnectionConfig = require('mongoose-connection-config');
 
 require("./config/passport")(passport)
 
 //mongoose
+const opts = {
+    host: process.env.MONGO_HOST || 'localhost',
+    port: process.env.MONGO_PORT || 27017,
+    database: 'test'
+  };
+
+  const mcc = new MongooseConnectionConfig(opts);
+
 mongoose.connect('mongodb+srv://Alberttran1:Cheekypoop123@cluster0.x4jd1.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',{useNewUrlParser: true, useUnifiedTopology : true})
 .then(() => console.log('connected,,'))
 .catch((err)=> console.log(err));
