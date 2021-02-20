@@ -1,0 +1,60 @@
+<html>
+<link href="/css/style.css" rel="stylesheet" type="text/css">
+<body>
+  <div class="hero">
+    <div class="form-box">
+      <p class="register">Register</p>
+      <div class="partials"><%- include ('./partials/messages') %></div>
+        <form class="input-group login" action="/users/register" method="POST">
+          <div>
+            <label for="name">Name</label>
+            <input
+              class="input-field"
+              type="name"
+              name="name"
+              placeholder="Enter Name"
+              value="<%= typeof name != 'undefined' ? name : '' %>"
+            />
+          
+        </div>
+        <div>
+            <label for="email">Email</label>
+            <input
+              class="input-field"
+              type="email"
+              name="email"
+              placeholder="Enter Email"
+              value="<%= typeof email != 'undefined' ? email : '' %>"
+            />
+          </div>
+          <div >
+            <label for="password">Password</label>
+            <input
+              class="input-field"
+              type="password"
+              name="password"
+              placeholder="Create Password"
+              value="<%= typeof password != 'undefined' ? password : '' %>"
+            />
+          </div>
+          <div >
+            <label for="password2">Confirm Password</label>
+            <input
+              class="input-field"
+              type="password"
+              name="password2"
+              placeholder="Confirm Password"
+              value="<%= typeof password2 != 'undefined' ? password2 : '' %>"
+            />
+          </div>
+        </br>
+          <button type="submit" class="btn btn-primary btn-block submit-btn">
+            Register
+          </button>
+          <p class="have_account">Have an account? <a href="/users/login">Login</a></p>
+        </form>
+    </div>
+  </div>
+    
+</body>
+</html>
