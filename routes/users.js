@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const User = require("../models/user");
+const Project = require("../models/project");
 const bcrypt = require('bcrypt');
 const passport = require('passport');
 //login handle
@@ -77,10 +78,33 @@ passport.authenticate('local',{
        })
     }
     })
+
+// project
+router.get('/dashboard',(req,res)=>{
+    res.render('dashboard')
+    })
+router.post('/dashboard',(req,res)=>{
+    const {url, project_name, project_desc, user_id} = req.body;
+    const newProject = new Project({
+        url : url,
+        project_name : project_name,
+        project_desc : project_desc,
+        user_id : user_id
+    });
+    newProject.save()
+    .then((value)=>{
+        console.log(value)
+        res.redirect('/dashboard');
+    })
+    .catch(value=> console.log(value));
+})
+
 //logout
 router.get('/logout',(req,res)=>{
 req.logout();
 req.flash('success_msg','Now logged out');
 res.redirect('/users/login'); 
 })
+
+    
 module.exports  = router;

@@ -1,3 +1,65 @@
-<h1>Dashboard</h1>
-<p> Welcome <%= user.name %></p>
-<a href="/users/logout">Logout</a>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link href="/css/style.css" rel="stylesheet" type="text/css">
+    </head>
+<body>
+    <a href="/users/logout" class = "logout">Logout</a>
+    <p class="name"><%= user.name %></p>
+
+    <!-- Trigger the modal with a button -->
+    <div class="add">
+        <button type="button" class="btn-info btn-lg plus" data-toggle="modal" data-target="#myModal"><div>+</div></button>    
+    </div>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal fade" role="dialog">
+     <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Add Project</h4>
+      </div>
+      <div class="modal-body">
+        <form class="input-group" action="/users/dashboard" method="POST" id="project">
+            <div>
+              <label for="url">Img URL</label>
+              <input
+                class="input-field"
+                name="url"
+                placeholder="Insert image link"
+                value="<%= typeof url != 'undefined' ? url : '' %>"
+              />
+          </div>
+          <div>
+              <label for="project_name">Project Name</label>
+              <input
+                class="input-field"
+                name="project_name"
+                placeholder="Enter the name of your project"
+                value="<%= typeof project_name != 'undefined' ? project_name : '' %>"
+              />
+            </div>
+            <label for="project_desc">Project Description</label>
+            <textarea rows="4" cols="50" name="project_desc" form="project"></textarea>
+            <textarea style="display:none" rows="4" cols="50" name="user_id" form="project"><%= user.name %></textarea>
+            <br>    
+          </br>
+            <button type="submit" class="btn btn-primary btn-block submit-btn">
+              Submit
+            </button>
+          </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+</body>
+</html>

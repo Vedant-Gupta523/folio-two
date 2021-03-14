@@ -189,3 +189,39 @@ button.start:hover {
   margin-left: 50px;
   color: green;
 }
+
+/* DASHBOARD */ 
+
+.name {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 32px;
+  font-weight: bold;
+}
+.logout{
+  position: absolute;
+  right: 0;
+  margin-right: 25px;
+  font-size: 15px;
+}
+.plus{
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  outline: none;
+  border:none;
+}
+.add {
+  margin: 0;
+  position: absolute;
+  left: 50%;
+  -ms-transform: translate(-50%, 0%);
+  transform: translate(-50%, 0%);
+}
+.modal-body {
+  display: flex;
+  justify-content: center;
+}
