@@ -4,6 +4,10 @@ const projectSchema  = new mongoose.Schema({
       type  : String,
       required : true
   } ,
+  project_url :{
+    type  : String,
+    required : false
+} ,
   project_name :{
     type  : String,
     required : true

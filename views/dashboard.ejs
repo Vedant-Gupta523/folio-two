@@ -14,12 +14,14 @@
     <br>
     <% for (var i = 0; i < projects.length; i++) { %>
         <div class="fullcontainer">
+    <a href="<%= projects[i].project_url %>">
             <div class="projectcontainer">
                 <img src="<%= projects[i].url %>" alt="image" class="project_image">
                 <p class="project_name top-left"><%= projects[i].project_name %></p>
                 <p class="project_desc sub-text"><%= projects[i].project_desc %></p>
                 <a href="/dashboard/<%= projects[i]._id.toString() %>"><button class="delete">x</button></a>
             </div>
+          </a>
         </div> <br><br>
     <% } %>
 
@@ -50,6 +52,15 @@
               />
           </div>
           <div>
+            <label for="project_url">Project URL</label>
+            <input
+              class="input-field"
+              name="project_url"
+              placeholder="Insert image link"
+              value="<%= typeof project_url != 'undefined' ? project_url : '' %>"
+            />
+        </div>
+          <div>
               <label for="project_name">Project Name</label>
               <input
                 class="input-field"
@@ -60,7 +71,7 @@
               />
             </div>
             <label for="project_desc">Project Description</label>
-            <textarea rows="4" cols="50" name="project_desc" form="project" maxlength="500"></textarea>
+            <textarea rows="4" cols="50" name="project_desc" form="project" maxlength="750"></textarea>
             <textarea style="display:none" rows="4" cols="50" name="user_id" form="project"><%= user._id.toString() %></textarea>
             <br>    
           </br>
