@@ -25,7 +25,7 @@
     <!-- Trigger the modal with a button -->
     <div class="add">
         <button type="button" class="btn-info btn-lg plus" data-toggle="modal" data-target="#myModal"><div>+</div></button>    
-    </div>
+    </div> <br><br><br><br>
 
     <!-- Modal -->
     <div id="myModal" class="modal fade" role="dialog">
@@ -55,6 +55,7 @@
                 name="project_name"
                 placeholder="Enter the name of your project"
                 value="<%= typeof project_name != 'undefined' ? project_name : '' %>"
+                maxlength="35"
               />
             </div>
             <label for="project_desc">Project Description</label>

@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link href="/css/style.css" rel="stylesheet" type="text/css">
     <title>Folio</title>
 </head>
 <body style="overflow: auto;">
     <p class="name"><%= user.name %></p>
+    <br>
     <% for (var i = 0; i < projects.length; i++) { %>
         <div class="fullcontainer">
-            <div class="projectcontainer">
+            <a href="https://en.wikipedia.org/wiki/Turtle"><div class="projectcontainer">
                 <img src="<%= projects[i].url %>" alt="image" class="project_image">
                 <p class="project_name top-left"><%= projects[i].project_name %></p>
                 <p class="project_desc sub-text"><%= projects[i].project_desc %></p>
-            </div>
+            </div></a>
         </div> <br><br>
     <% } %>
 </body>
