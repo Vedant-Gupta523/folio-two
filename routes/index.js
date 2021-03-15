@@ -19,4 +19,13 @@ router.get('/dashboard',ensureAuthenticated,(req,res)=>{
         });  
     })
 })
+
+// delete
+router.get('/dashboard/:id',(req,res)=>{
+    Project.findByIdAndRemove(req.params.id, function(err){
+        res.redirect("/dashboard");
+     });
+})
+
+
 module.exports = router; 

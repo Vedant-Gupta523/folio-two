@@ -18,9 +18,7 @@
                 <img src="<%= projects[i].url %>" alt="image" class="project_image">
                 <p class="project_name top-left"><%= projects[i].project_name %></p>
                 <p class="project_desc sub-text"><%= projects[i].project_desc %></p>
-                <a href="/dashboard/delete/<%= projects[i]._id.toString() %>"><button class="delete">x
-
-                </button></a>
+                <a href="/dashboard/<%= projects[i]._id.toString() %>"><button class="delete">x</button></a>
             </div>
         </div> <br><br>
     <% } %>
