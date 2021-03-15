@@ -246,22 +246,50 @@ button.start:hover {
   transition: 0.2s;
 }
 
-.project_image:hover {
-  transition: 0.2s;
-  filter: brightness(30%);
-}
-
-.container {
+.projectcontainer {
   display: inline-block;
-  border: solid;
+  position: relative;
 }
 
 .fullcontainer{
   text-align: center;
-  border:red;
 }
 .top-left {
+  transition: 0.2s;
+  opacity: 0;
   position: absolute;
-  top: 10;
-  left: 10;
+  top: -20;
+  left: 40;
+  color: white;
+}
+
+.sub-text {
+  transition: 0.2s;
+  opacity: 0;
+  position: absolute;
+  top: -20;
+  left: 40;
+  color: white;
+  word-wrap: break-word;
+}
+
+.projectcontainer:hover .top-left {
+  transition: 0.2s;
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  left: 40;
+}
+
+.projectcontainer:hover .sub-text {
+  transition: 0.2s;
+  opacity: 1;
+  position: absolute;
+  top: 75;
+  left: 40;
+}
+
+.projectcontainer:hover .project_image {
+  transition: 0.2s;
+  filter: brightness(30%);
 }

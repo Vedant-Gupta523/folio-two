@@ -8,12 +8,12 @@
     <p class="name"><%= user.name %></p>
     <% for (var i = 0; i < projects.length; i++) { %>
         <div class="fullcontainer">
-            <div class="container">
+            <div class="projectcontainer">
                 <img src="<%= projects[i].url %>" alt="image" class="project_image">
-                <p class="project_name"><%= projects[i].project_name %></p>
-                <p class="project_desc"><%= projects[i].project_desc %></p>
+                <p class="project_name top-left"><%= projects[i].project_name %></p>
+                <p class="project_desc sub-text"><%= projects[i].project_desc %></p>
             </div>
-        </div>
+        </div> <br><br>
     <% } %>
 </body>
 </html>
