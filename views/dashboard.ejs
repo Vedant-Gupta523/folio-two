@@ -7,6 +7,7 @@
     </head>
 <body>
     <a href="/users/logout" class = "logout">Logout</a>
+    <a href="/users/portfolio/<%= user._id.toString() %>" class="preview" target="_blank">Preview</a>
     <p class="name"><%= user.name %></p>
 
     <!-- Trigger the modal with a button -->
@@ -46,7 +47,7 @@
             </div>
             <label for="project_desc">Project Description</label>
             <textarea rows="4" cols="50" name="project_desc" form="project"></textarea>
-            <textarea style="display:none" rows="4" cols="50" name="user_id" form="project"><%= user.name %></textarea>
+            <textarea style="display:none" rows="4" cols="50" name="user_id" form="project"><%= user._id.toString() %></textarea>
             <br>    
           </br>
             <button type="submit" class="btn btn-primary btn-block submit-btn">

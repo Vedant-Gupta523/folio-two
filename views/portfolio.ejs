@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="/css/style.css" rel="stylesheet" type="text/css">
+    <title>Folio</title>
+</head>
+<body style="overflow: auto;">
+    <p class="name"><%= user.name %></p>
+    <% for (var i = 0; i < projects.length; i++) { %>
+    <img src="<%= projects[i].url %>" alt="image" class="project_image">
+    <p class="project_name"><%= projects[i].project_name %></p>
+    <p class="project_desc"><%= projects[i].project_desc %></p>
+    <% } %>
+</body>
+</html>

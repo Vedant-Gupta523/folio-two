@@ -204,6 +204,12 @@ button.start:hover {
   margin-right: 25px;
   font-size: 15px;
 }
+.preview{
+  position: absolute;
+  left: 0;
+  margin-left: 25px;
+  font-size: 15px;
+}
 .plus{
   border-radius: 50%;
   width: 50px;
@@ -224,4 +230,23 @@ button.start:hover {
 .modal-body {
   display: flex;
   justify-content: center;
+}
+
+.project_image {
+  height: 600px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.project_name {
+  text-align: center;
+  font-weight: bold;
+  font-size: 32px;
+}
+
+.project_desc {
+  text-align: center;
+  font-size: 22px;
+  padding-bottom: 100px;
 }
