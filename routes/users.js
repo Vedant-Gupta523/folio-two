@@ -111,6 +111,12 @@ router.get('/portfolio/:id',(req,res)=>{
     })
     })
 
+//delete
+router.get('/dashboard/delete/:id',(req,res)=>{
+        res.render('login');
+    })
+
+
 //logout
 router.get('/logout',(req,res)=>{
 req.logout();

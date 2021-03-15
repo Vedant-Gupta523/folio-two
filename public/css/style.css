@@ -275,6 +275,12 @@ button.start:hover {
   font-size: 16px;
 }
 
+.delete {
+  position: absolute;
+  top: 10;
+  right: 10;
+}
+
 .projectcontainer:hover .top-left {
   transition: 0.2s;
   opacity: 1;
