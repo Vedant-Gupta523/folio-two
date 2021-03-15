@@ -7,9 +7,11 @@
 <body style="overflow: auto;">
     <p class="name"><%= user.name %></p>
     <% for (var i = 0; i < projects.length; i++) { %>
-    <img src="<%= projects[i].url %>" alt="image" class="project_image">
-    <p class="project_name"><%= projects[i].project_name %></p>
-    <p class="project_desc"><%= projects[i].project_desc %></p>
+    <div class="container">
+        <img src="<%= projects[i].url %>" alt="image" class="project_image">
+        <p class="project_name"><%= projects[i].project_name %></p>
+        <p class="project_desc"><%= projects[i].project_desc %></p>
+    </div>
     <% } %>
 </body>
 </html>

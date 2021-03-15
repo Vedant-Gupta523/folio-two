@@ -232,21 +232,31 @@ button.start:hover {
   justify-content: center;
 }
 
-.project_image {
-  height: 600px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .project_name {
   text-align: center;
   font-weight: bold;
   font-size: 32px;
 }
 
-.project_desc {
-  text-align: center;
-  font-size: 22px;
-  padding-bottom: 100px;
+.project_image {
+  height: 600px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  transition: 0.2s;
+}
+
+.project_image:hover {
+  transition: 0.2s;
+  filter: brightness(30%);
+}
+
+.container {
+  display: inline-block;
+}
+
+.top-left {
+  position: absolute;
+  top: 10;
+  left: 10;
 }

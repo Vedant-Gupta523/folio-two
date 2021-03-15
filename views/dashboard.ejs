@@ -5,10 +5,20 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
         <link href="/css/style.css" rel="stylesheet" type="text/css">
     </head>
-<body>
+<body style="overflow: auto;">
     <a href="/users/logout" class = "logout">Logout</a>
     <a href="/users/portfolio/<%= user._id.toString() %>" class="preview" target="_blank">Preview</a>
     <p class="name"><%= user.name %></p>
+
+    <!-- PROJECTS -->
+    <br>
+    <% for (var i = 0; i < projects.length; i++) { %>
+      <img src="<%= projects[i].url %>" alt="image" class="project_image">
+    <br>
+      <p class="project_name"><%= projects[i].project_name %></p>
+      <br>
+      <p class="project_desc"><%= projects[i].project_desc %></p>
+      <% } %>
 
     <!-- Trigger the modal with a button -->
     <div class="add">
