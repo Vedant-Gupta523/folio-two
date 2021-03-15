@@ -253,8 +253,13 @@ button.start:hover {
 
 .container {
   display: inline-block;
+  border: solid;
 }
 
+.fullcontainer{
+  text-align: center;
+  border:red;
+}
 .top-left {
   position: absolute;
   top: 10;
