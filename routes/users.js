@@ -21,7 +21,7 @@ passport.authenticate('local',{
 })
 //register post handle
 router.post('/register',(req,res)=>{
-const {name,email, password, password2} = req.body;
+const {name,email, password, password2, linkedin, github, personal_web, medium} = req.body;
 let errors = [];
 console.log(' Name ' + name+ ' email :' + email+ ' pass:' + password);
 if(!name || !email || !password || !password2) {
@@ -42,19 +42,27 @@ res.render('register', {
     name : name,
     email : email,
     password : password,
-    password2 : password2})
+    password2 : password2,
+    linkedin : linkedin,
+    github : github,
+    personal_web : personal_web,
+    medium : medium})
     } else {
     //validation passed
     User.findOne({email : email}).exec((err,user)=>{
     console.log(user);   
     if(user) {
         errors.push({msg: 'Email already registered'});
-        res.render('register',{errors,name,email,password,password2})  
+        res.render('register',{errors,name,email,password,password2,linkedin,github,personal_web,medium})  
         } else {
         const newUser = new User({
             name : name,
             email : email,
-            password : password
+            password : password,
+            linkedin : linkedin,
+            github : github,
+            personal_web : personal_web,
+            medium : medium
         });
 
         //hash password

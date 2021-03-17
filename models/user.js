@@ -13,6 +13,22 @@ password :{
     type  : String,
     required : true
 } ,
+linkedin :{
+    type  : String,
+    required : false
+} ,
+github :{
+    type  : String,
+    required : false
+} ,
+personal_web :{
+    type  : String,
+    required : false
+} ,
+medium :{
+    type  : String,
+    required : false
+} ,
 date :{
     type : Date,
     default : Date.now

@@ -1,6 +1,6 @@
 <html>
 <link href="/css/style.css" rel="stylesheet" type="text/css">
-<body>
+<body style="overflow: auto;">
   <div class="hero">
     <div class="form-box">
       <p class="register">Register</p>
@@ -45,6 +45,46 @@
               name="password2"
               placeholder="Confirm Password"
               value="<%= typeof password2 != 'undefined' ? password2 : '' %>"
+            />
+          </div>
+          <div >
+            <label for="linkedin">LinkedIn</label>
+            <input
+              class="input-field"
+              type="linkedin"
+              name="linkedin"
+              placeholder="LinkedIn"
+              value="<%= typeof linkedin != 'undefined' ? linkedin : '' %>"
+            />
+          </div>
+          <div >
+            <label for="github">Github</label>
+            <input
+              class="input-field"
+              type="github"
+              name="github"
+              placeholder="Github"
+              value="<%= typeof github != 'undefined' ? github : '' %>"
+            />
+          </div>
+          <div >
+            <label for="personal_web">Personal Website</label>
+            <input
+              class="input-field"
+              type="personal_web"
+              name="personal_web"
+              placeholder="Personal Website"
+              value="<%= typeof personal_web != 'undefined' ? personal_web : '' %>"
+            />
+          </div>
+          <div >
+            <label for="medium">Medium</label>
+            <input
+              class="input-field"
+              type="medium"
+              name="medium"
+              placeholder="Medium"
+              value="<%= typeof medium != 'undefined' ? medium : '' %>"
             />
           </div>
         </br>

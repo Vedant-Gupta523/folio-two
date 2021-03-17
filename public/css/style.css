@@ -84,21 +84,19 @@ img.homePageImage {
 
 .header a.menu:hover {
   color: rgb(154, 229, 254);
-  transition: color 0.2s;
+  transition: 0.2s;
 }
 
 .header a.active {
   background-color: rgb(51,184,252);
   color: white;
-  transition: background-color 1s;
-  transition: color 1s;
+  transition: 0.2s;
 }
 
 .header a.active:hover {
   background-color: white;
   color: rgb(51,184,252);
-  transition: background-color 1s;
-  transition: color 1s;
+  transition: 0.2s;
 }
 
 .header-right {
@@ -130,7 +128,7 @@ p.homeBody {
 /* GET STARTED */
 button.start {
   text-decoration: none;
-  background-image: white;
+  background: white;
   color: rgb(154, 229, 254);
   border-radius: 40px;
   padding: 10px 20px;
@@ -141,16 +139,13 @@ button.start {
   transition: 0.2s;
   border: none;
   outline: none;
-  /*-webkit-transition: color 0.5s ease-in-out;
-  -moz-transition: color 0.5s ease-in-out;
-  -o-transition: color 0.5s ease-in-out;
-  */
-  transition: color 0.5s ease-in-out;
+  transition: 0.2s;
 }
 
 button.start:hover {
   color: white;
-  background-image: linear-gradient(to right,rgb(51,184,252),rgb(137,77,253));
+  transition: 0.2s;
+  background: linear-gradient(to right,rgb(51,184,252),rgb(137,77,253));
 }
 
 .hero {
@@ -238,12 +233,6 @@ button.start:hover {
 
 /* DASHBOARD */ 
 
-.name {
-  text-align: center;
-  margin-top: 30px;
-  font-size: 32px;
-  font-weight: bold;
-}
 .logout{
   position: absolute;
   right: 0;
@@ -252,8 +241,8 @@ button.start:hover {
 }
 .preview{
   position: absolute;
-  left: 0;
-  margin-left: 25px;
+  right: 0;
+  margin-right: 100px;
   font-size: 15px;
 }
 .plus{
@@ -272,6 +261,8 @@ button.start:hover {
   left: 50%;
   -ms-transform: translate(-50%, 0%);
   transform: translate(-50%, 0%);
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 .modal-body {
   display: flex;
@@ -279,47 +270,28 @@ button.start:hover {
 }
 
 .project_name {
-  text-align: center;
   font-weight: bold;
   font-size: 32px;
 }
 
 .project_image {
-  height: 600px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  transition: 0.2s;
-}
-
-.projectcontainer {
-  display: inline-block;
-  position: relative;
+  height: 310px;
+  padding-right: 30px;
+  float: left;
+  clear: left;
+  padding-top: 10px;
 }
 
 .fullcontainer{
-  text-align: center;
-}
-.top-left {
-  transition: 0.2s;
-  opacity: 0;
-  position: absolute;
-  top: 0;
-  left: 40;
-  color: white;
+  margin-left: 370px;
+  padding-top: 30px;
+  clear: left;
 }
 
-.sub-text {
-  transition: 0.2s;
-  opacity: 0;
-  position: absolute;
-  top: 0;
-  left: 40;
-  color: white;
+.project_desc {
   word-wrap: break-word;
-  font-size: 16px;
+  font-size: 20px;
   text-align: left;
-  margin-right: 40px;
 }
 
 .delete {
@@ -328,26 +300,55 @@ button.start:hover {
   right: 10;
 }
 
-.projectcontainer:hover .top-left {
-  transition: 0.2s;
-  opacity: 1;
-  position: absolute;
-  top: 30;
-  left: 40;
+.project_text {
+  margin-left: 575px;
 }
 
-.projectcontainer:hover .sub-text {
-  transition: 0.2s;
-  opacity: 1;
-  position: absolute;
-  top: 95;
-  left: 40;
-  font-size: 22px;
-  text-align: left;
-  margin-right: 40px;
+/* PORTFOLIO NEW */
+
+.sidenav {
+  height: 100%;
+  width: 320px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to bottom right,rgb(149,219,248),rgb(193,144,235));
+  overflow-x: hidden;
+  padding-top: 20px;
 }
 
-.projectcontainer:hover .project_image {
-  transition: 0.2s;
-  filter: brightness(30%);
+/*
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+}
+*/
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.name {
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* SOCIALS */
+
+.icon {
+  width: 50px;
+  height: 50px;
+}
+
+.social_list {
+  text-align: center;
+  padding: 0;
+  list-style-type: none;
 }
