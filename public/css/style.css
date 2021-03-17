@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', 
       sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -20,38 +20,66 @@ code {
 /* BACKGROUND */
 
 img.bg {
+  position: fixed;
   background-position: center center;
   background-repeat: no-repeat;
-  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+img.homePageImage {
+  position:fixed;
+  width: 60%;
+  height: 70%;
+  opacity: 0.7;
+  bottom:0px;
+  right: 0%;
 }
 
 /* HEADER */
 
 .header {
   overflow: hidden;
-  padding: 20px 10px;
+  padding: 10px 10px;
   width: 100vw;
+  /*border-bottom: 2px solid white;*/
+  box-shadow: 0px 0px 10px 0px rgb(0,0,0,0.2);
+}
+
+.header p.mainTitle{
+  display: inline-block;
+  position: absolute;
+  left: 47%;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0px;
+  font-size: 50px;
+  background: linear-gradient(to right,rgb(51,184,252),rgb(137,77,253));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .header a.button {
   float: left;
   color: white;
   text-align: center;
-  padding: 12px;
+  padding: 10px;
+  padding-right: 15px;
+  padding-left: 15px;
   text-decoration: none;
-  font-size: 32px;
+  font-size: 20px;
   line-height: 25px;
-  border-radius: 4px;
-  font-family: Calibri, sans-serif;
-  margin-right: 30px;
-  margin-top: 5px;
+  border-radius: 30px;
+  font-family: 'Work Sans', sans-serif;
+  margin-right: 10px;
+  margin-top: 7px;
   transition: color 0.2s;
 }
 
 .header img.logo {
-  width: 75px;
-  height: 75px;
-  margin-left: 2.5%;
+  width: 60px;
+  height: 60px;
+  margin-left: 1.5%;
 }
 
 .header a.menu:hover {
@@ -60,52 +88,69 @@ img.bg {
 }
 
 .header a.active {
-  background-color: rgb(154, 229, 254);
+  background-color: rgb(51,184,252);
   color: white;
-  transition: background-color 0.2s;
+  transition: background-color 1s;
+  transition: color 1s;
 }
 
 .header a.active:hover {
-  background-color: rgb(55, 181, 253);
-  transition: background-color 0.2s;
-  
+  background-color: white;
+  color: rgb(51,184,252);
+  transition: background-color 1s;
+  transition: color 1s;
 }
 
 .header-right {
   float: right;
+  padding-right: 40px;
 }
 
 
 /* TEXT */
 p.title {
   margin-left: 200px;
+  margin-bottom: 0px;
   color: white;
-  font-family: Calibri, sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
   font-size: 70px;
   white-space: nowrap;
+}
+
+p.homeBody {
+  margin-left: 200px;
+  color: white;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 300;
+  font-size: 25px;
+  line-height: 150%;
 }
 
 /* GET STARTED */
 button.start {
   text-decoration: none;
-  background-color: white;
+  background-image: white;
   color: rgb(154, 229, 254);
-  border-radius: 4px;
-  padding: 10px 10px;
-  font-family: Calibri, sans-serif;
+  border-radius: 40px;
+  padding: 10px 20px;
+  font-family: 'Work Sans', sans-serif;
   font-size: 32px;
   margin-left: 200px;
   display: inline-block;
-  margin-top: 275px;
   transition: 0.2s;
   border: none;
   outline: none;
+  /*-webkit-transition: color 0.5s ease-in-out;
+  -moz-transition: color 0.5s ease-in-out;
+  -o-transition: color 0.5s ease-in-out;
+  */
+  transition: color 0.5s ease-in-out;
 }
 
 button.start:hover {
   color: white;
-  background-color: rgb(55, 181, 253);
-  transition: 0.2s;
+  background-image: linear-gradient(to right,rgb(51,184,252),rgb(137,77,253));
 }
 
 .hero {
