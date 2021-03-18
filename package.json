@@ -1,7 +1,6 @@
 {
   "name": "folio-two",
   "version": "1.0.0",
-  "description": "",
   "main": "app.js",
   "dependencies": {
     "bcrypt": "^5.0.0",
@@ -36,5 +35,6 @@
   "bugs": {
     "url": "https://github.com/Vedant-Gupta523/folio-two/issues"
   },
-  "homepage": "https://github.com/Vedant-Gupta523/folio-two#readme"
+  "homepage": "https://github.com/Vedant-Gupta523/folio-two#readme",
+  "description": ""
 }
