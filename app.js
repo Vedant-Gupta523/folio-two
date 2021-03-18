@@ -50,7 +50,7 @@ app.use((req,res,next)=> {
 app.use('/',require('./routes/index'));
 app.use('/users',require('./routes/users'));
 
-app.listen(3000);
+app.listen(process.env.PORT || 5000);
 
 // images
 app.use( express.static( "public" ) );
