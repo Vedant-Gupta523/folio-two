@@ -8,6 +8,7 @@ const flash = require('connect-flash');
 const session = require('express-session');
 const passport = require('passport');
 const MongooseConnectionConfig = require('mongoose-connection-config');
+const CassandraStore = require('cassandra-store');
 
 require("./config/passport")(passport)
 
@@ -32,6 +33,7 @@ app.use(express.urlencoded({extended : false}));
 //express session
 app.use(session({
     secret : 'secret',
+    store: new CassandraStore(options),
     cookie: { maxAge: 60000},
     resave : true,
     saveUninitialized : true
