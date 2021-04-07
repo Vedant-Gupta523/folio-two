@@ -2,26 +2,45 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/v4-shims.css">
     <link href="/css/style.css" rel="stylesheet" type="text/css">
     <title>Folio</title>
 </head>
 <body style="overflow: auto;">
     <div class="sidenav">
         <p class="name"><%= user.name %></p>
-        <ul class="social_list">
+        <div class="social-buttons">
             <% if (user.linkedin.length > 0) { %>
-                <a href="<%= user.linkedin %>" target="_blank"><img src="/images/linkedin.png" class="icon"></a>
+                <a href="<%= user.linkedin %>" class="social-buttons__button social-button social-button--linkedin" aria-label="LinkedIn">
+                    <span class="social-button__inner">
+                     <i class="fa fa-linkedin"></i>
+                    </span>
+                </a>
             <% } %> 
-        <% if (user.github.length > 0) { %>
-            <a href="<%= user.github %>" target="_blank"><img src="/images/github.png" class="icon"></a>
-        <% } %> 
-        <% if (user.medium.length > 0) { %>
-            <a href="<%= user.medium %>" target="_blank"><img src="/images/medium.png" class="icon"></a>
-        <% } %> 
-        <% if (user.personal_web.length > 0) { %>
-            <a href="<%= user.personal_web %>" target="_blank"><img src="/images/personal.png" class="icon"></a>
-        <% } %> 
-        </ul>
+            <% if (user.github.length > 0) { %>
+                <a href="<%= user.github %>" class="social-buttons__button social-button social-button--github" aria-label="GitHub">
+                    <span class="social-button__inner">
+                     <i class="fa fa-github"></i>
+                    </span>
+                  </a>
+            <% } %> 
+            <% if (user.medium.length > 0) { %>
+                <a href="<%= user.medium %>" class="social-buttons__button social-button social-button--codepen" aria-label="CodePen">
+                    <span class="social-button__inner">
+                     <i class="fa fa-medium"></i>
+                    </span>
+                  </a>
+            <% } %>
+            <% if (user.personal_web.length > 0) { %>
+                <a href="<%= user.personal_web %>" class="social-buttons__button social-button social-button--facebook" aria-label="Facebook">
+                    <span class="social-button__inner">
+                        <i class="fas fa-portrait"></i>
+                    </span>
+                  </a>
+            <% } %>
+          </div>
         <!-- <a href="#about">About</a>
         <a href="#services">Services</a>
         <a href="#clients">Clients</a>
